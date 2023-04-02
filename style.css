@@ -2,14 +2,19 @@ body{
     font-family: 'Manrope', sans-serif;
     background-image: url(./images/bg-pattern.svg);
     background-repeat:no-repeat ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 header{
     background-image: url(./images/pattern-circles.svg);
     background-repeat: no-repeat; 
     background-position: center;
+    height: 242px;
 }
 .header_h1{
-    margin-top: 89px;
+    margin-top: 102px;
+    margin-bottom: 8px;
     font-size: 20px;
     font-weight: 800;
     line-height: 27.32px;
@@ -30,6 +35,10 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 327px;
+    border-radius: 8px;
+    margin-bottom: 88px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .title{
     font-weight: 800;
@@ -53,6 +62,9 @@ header{
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
+    position: relative;
+    left: 119px;
+    top: -16px;
 }
 .dolar{
     font-weight: 800;
@@ -69,4 +81,80 @@ header{
     text-align: center;
     color: #848EAD;
     margin-left: 10px;
+}
+.billing{
+    color: #848EAD;
+}
+.for_row{
+    display: flex;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.button_slide{
+    width: 43px;
+    height: 22px;
+    border: none;
+    border-radius: 15px;
+    margin-left: 8px;
+}
+.button_div{
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border-radius: 15px;
+}
+.diss_span{
+    display: none;
+}
+.for_discount{
+    width: 41px;
+    height: 19px;
+    background: #FEEDE8;
+    color: red;
+    border-radius: 15px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.for_check{
+    display: flex;
+    gap: 16.5px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.check{
+    width: 6.95px;
+    height: 5.05px;
+}
+.txt{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16.39px;
+    color: #848EAD;
+}
+.button_blue{
+    width: 170px;
+    height: 41px;
+    border: none;
+    border-radius: 20.5px;
+    background-color: #293356;
+    color: #BECDFF;
+    margin-top: 33px;
+    margin-bottom: 30px;
+}
+.first_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 34px;
+    gap:25px;
+}
+.last_div{
+    margin-top: 69px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
