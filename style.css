@@ -5,6 +5,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    justify-content: center;
 }
 header{
     background-image: url(./images/pattern-circles.svg);
@@ -65,6 +67,7 @@ header{
     position: relative;
     left: 119px;
     top: -16px;
+    box-shadow: rgba(2, 250, 196, 1) 0px 10px 30px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(158, 248, 248, 0.09) 0px -3px 5px;
 }
 .dolar{
     font-weight: 800;
@@ -151,10 +154,85 @@ header{
     margin-top: 34px;
     gap:25px;
 }
-.last_div{
-    margin-top: 69px;
+.last_div2{
+    margin-top: 37px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.header_pp {
+    display: none;
+}
+.line{
+    margin-top: 33px;
+    width: 315px;
+    height: 1px;
+    background-color:#ECF0FB;
+
+}
+@media(min-width: 768px){
+   .header_h1{
+    font-size: 28px;
+    line-height: 38.25px;
+   }
+   .header_p{
+    display: none;
+   }
+   .header_pp{
+    display: block;
+    font-size: 15px;
+    line-height: 20.49px;
+    color: #848EAD;
+    text-align: center;
+   }
+   .main_div{
+    width: 540px;
+   }
+   .first_div{
+    align-items: initial;
+    gap: 6px;
+   }
+   .long_line{
+    width: 444px;
+    margin-top: 34px;
+   }
+   .circle{
+    left: 196px;
+   }
+   .dolar{
+    position: relative;
+    right: 10px;
+    top: -84px;
+   }
+   .title{
+    font-size: 14px;
+   }
+   .for_row{
+    justify-content: end;
+   }
+   .diss_span{
+    display: block;
+   }
+   .for_discount{
+    width: 93px;
+    height: 25px;
+   }
+   .discount{
+    display: flex;
+    gap: 5px;
+   }
+   .last_div{
+    display: flex;
+    flex-direction: row;
+    gap: 136px;
+    margin-top: 40px;
+
+   }
+   .last_div2{
+    margin-top: 0px;
+   }
+   .line{
+    width: 536px;
+   }
 }
