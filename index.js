@@ -17,49 +17,40 @@ rangeInput.oninput = function() {
   let gradient =  'linear-gradient(to right, #10D8C4  0%, #10D8C4 '  + thumbPosition + '%, #ffffff' + thumbPosition + '%,rgba(255, 255, 255, 1))'
   rangeInput.style.backgroundImage = gradient;
   sliderValue = this.value;
-  cash.textContent = "$" + value ;
+  cash.textContent = "$" + sliderValue ;
 
-  if( value === "8"){
+  if( sliderValue === "8" || sliderValue === "73"){
     views.textContent = "10K PAGEVIEWS";
-  } else if(value === "12"){
+  } else if(sliderValue === "12" || sliderValue === "108"){
     views.textContent = "50K PAGEVIEWS";
-  } else if(value === "16"){
+  } else if(sliderValue === "16"|| sliderValue === "144"){
     views.textContent = "100K PAGEVIEWS";
-  }else if(value === "24"){
+  }else if(sliderValue === "24" || sliderValue === "216"){
     views.textContent = "500K PAGEVIEWS";
-  }else if(value === "36"){
+  }else if(sliderValue === "36" || sliderValue === "324" ){
     views.textContent = "1M PAGEVIEWS";
-  } else if(value === "73"){
-    views.textContent = "10K PAGEVIEWS";
- } else if(value === "108"){
-    views.textContent = "50K PAGEVIEWS";
- } else if(value === "144"){
-    views.textContent = "100K PAGEVIEWS";
- }else if(value === "216"){
-    views.textContent = "500K PAGEVIEWS";
- }else if(value === "324"){
-    views.textContent = "1M PAGEVIEWS";
- }
+  }
  };
 
 
-
+ rangeInput.oninput();
 checked.addEventListener("change", function(){
   if(this.checked){
     rangeInput.min = 72;
     rangeInput.max = 324;
-    rangeInput.value = rangeInput.value * 12 * 0.75;
-    rangeInput.oninput();
+    rangeInput.value = sliderValue * 12 * 0.75;
+    
   } else {
     rangeInput.min = 8;
     rangeInput.max = 36;
+    rangeInput.value = sliderValue / 12 / 0.75;
   }
-
+  rangeInput.oninput();
 });
   
 
 
-//use throw and catch debugging 
+//use try and catch debugging 
 //make smaller problems 
 //jest  testing page
 //use typescript  
