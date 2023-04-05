@@ -9,23 +9,58 @@ let cash = document.getElementById("dolar");
 let month = document.getElementById("month");
 let rangeInput = document.getElementById("rangeInput");
 let viewers = views.textContent;
-let value = rangeInput.value; 
-let dolar = cash.textContent; // I connect dolar which will aqual to rangeinput, cuz when it start moving, dollar will change automaticaly
-value = dolar;
+let checked = document.getElementById("check");
 
-rangeInput.addEventListener("input", function() {
+let sliderValue = 16;
+rangeInput.oninput = function() {
   let thumbPosition = (rangeInput.value - rangeInput.min) / (rangeInput.max - rangeInput.min) * 100;
   let gradient =  'linear-gradient(to right, #10D8C4  0%, #10D8C4 '  + thumbPosition + '%, #ffffff' + thumbPosition + '%,rgba(255, 255, 255, 1))'
   rangeInput.style.backgroundImage = gradient;
-  
-  if(value == 1){
-    dolar = 8;
-    viewers = 10;
+  sliderValue = this.value;
+  cash.textContent = "$" + value ;
+
+  if( value === "8"){
+    views.textContent = "10K PAGEVIEWS";
+  } else if(value === "12"){
+    views.textContent = "50K PAGEVIEWS";
+  } else if(value === "16"){
+    views.textContent = "100K PAGEVIEWS";
+  }else if(value === "24"){
+    views.textContent = "500K PAGEVIEWS";
+  }else if(value === "36"){
+    views.textContent = "1M PAGEVIEWS";
+  } else if(value === "73"){
+    views.textContent = "10K PAGEVIEWS";
+ } else if(value === "108"){
+    views.textContent = "50K PAGEVIEWS";
+ } else if(value === "144"){
+    views.textContent = "100K PAGEVIEWS";
+ }else if(value === "216"){
+    views.textContent = "500K PAGEVIEWS";
+ }else if(value === "324"){
+    views.textContent = "1M PAGEVIEWS";
+ }
+ };
+
+
+
+checked.addEventListener("change", function(){
+  if(this.checked){
+    rangeInput.min = 72;
+    rangeInput.max = 324;
+    rangeInput.value = rangeInput.value * 12 * 0.75;
+    rangeInput.oninput();
+  } else {
+    rangeInput.min = 8;
+    rangeInput.max = 36;
   }
+
 });
+  
+
 
 //use throw and catch debugging 
 //make smaller problems 
 //jest  testing page
-//use typescript
+//use typescript  
 

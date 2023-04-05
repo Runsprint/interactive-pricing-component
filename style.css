@@ -41,6 +41,7 @@ header{
     border-radius: 8px;
     margin-bottom: 88px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
 }
 .title{
     font-weight: 800;
@@ -110,6 +111,7 @@ input[type = "range"] {
     display: flex;
     gap: 6px;
     align-items: center;
+    margin-top: 60px;
 }
 .button_div{
     width: 14px;
@@ -240,12 +242,21 @@ input[type = "range"] {
     border-radius: 50%;
   }
 
-
-
-
-
+.month{
+  position: absolute;
+  top: 144px;
+  display: flex;
+  align-items: center;
+}
 
 @media(min-width: 768px){
+  .month{
+    position: absolute;
+    top: 20px;
+    right: 59px;
+    display: flex;
+    align-items: center;
+  }
    .header_h1{
     font-size: 28px;
     line-height: 38.25px;
@@ -268,11 +279,6 @@ input[type = "range"] {
     gap: 6px;
    }
    
-   .dolar{
-    position: relative;
-    right: 10px;
-    top: -84px;
-   }
    .title{
     font-size: 14px;
    }
