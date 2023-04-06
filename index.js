@@ -12,6 +12,8 @@ let viewers = views.textContent;
 let checked = document.getElementById("check");
 
 let sliderValue = 16;
+//this is a function when gradient is changing and this toggle moving
+//slidervalue is 16 cuzwhen we move it , after clicked toggle and change year , slider come bach at 16.
 rangeInput.oninput = function() {
   let thumbPosition = (rangeInput.value - rangeInput.min) / (rangeInput.max - rangeInput.min) * 100;
   let gradient =  'linear-gradient(to right, #10D8C4  0%, #10D8C4 '  + thumbPosition + '%, #ffffff' + thumbPosition + '%,rgba(255, 255, 255, 1))'
@@ -32,26 +34,26 @@ rangeInput.oninput = function() {
   }
  };
 
-
+//we order ranginput.oninput function cuz we want manipulate on it after we change year/month.
  rangeInput.oninput();
 checked.addEventListener("change", function(){
   if(this.checked){
     rangeInput.min = 72;
     rangeInput.max = 324;
+    //this is a formula, for we understadn daaxloebit this place where slider shoul be when we move it  
     rangeInput.value = sliderValue * 12 * 0.75;
     
   } else {
     rangeInput.min = 8;
     rangeInput.max = 36;
+    //and its opposite of up and thats means when we change year with month and slidervalue will change,it should khnow where should be
+    //with this formula, this slider will be at middle if we press toggle or not. 
     rangeInput.value = sliderValue / 12 / 0.75;
   }
+  //we need to rder this function, cuz when we have some pozition and will change month with year numbers willnt change if we dont have ordered this function
+  //and with this function, when we clicked toggle(changing of year/mont) numbers will change without change positions.
   rangeInput.oninput();
 });
   
 
-
-//use try and catch debugging 
-//make smaller problems 
-//jest  testing page
-//use typescript  
 
